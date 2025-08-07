@@ -1,5 +1,5 @@
 #
-# 
+# This script was developed by @Neutrino
 #
 
 
